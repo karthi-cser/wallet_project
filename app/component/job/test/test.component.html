@@ -1,0 +1,243 @@
+
+
+
+<div class="row">
+
+<div  class="col-md-4"></div>  <div class="col-md-4">
+<h4>Account</h4>
+
+<table class="compact highlight">
+  <tbody>
+    <tr>
+      <td width="130">Username:</td>
+      <td width="200">noureenahsan91@gmail.com</td>
+      <td><a >
+        Change
+      </a></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td><span class="show50">**********</span></td>
+      <td><a >
+        Change
+      </a></td>
+    </tr>
+    <tr>
+      <td>Email address:</td>
+      <td>noureenahsan91@gmail.com</td>
+      <td><a >
+        Change
+      </a></td>
+    </tr>
+    <tr>
+      <td>Language:</td>
+      <td>
+        English
+      </td>
+     
+    </tr>
+    <tr>
+      <td>Account status:</td>
+      <td>
+        Active
+      </td>
+      <td>
+        <a class="" title="Deactive account"  >
+          Deactivate
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="solid">
+
+<ngb-accordion #acc="ngbAccordion" activeIds="config-panel-one">
+  <ngb-panel title="Address Book" id="config-panel-one">
+    <ng-template ngbPanelContent>
+      <p>Address Book</p>
+  <p>Withdrawing cryptocurrencies from Bitfinex requires specifying a destination address. The address book allows for labeling and saving destination addresses for easy use later. When withdrawing you can quickly select an address from your address book.</p>
+  <h6>Add to Address Book</h6>
+  <form [formGroup]="addForm"  (ngSubmit)="onSubmit()">
+  
+
+     
+<div class="form-group">
+  <label for="currency">Currency</label>
+    
+          <div  class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    </thead>
+    <tbody>
+    <tr>
+      <td>  
+        
+         <select name="currency"  class="form-control" >
+          <option  value="USD PAX">USD PAX</option>
+          <option  value="Bitcoin ">Bitcoin</option>
+          <option  value="Bitcoin cash">Bitcoin cash</option>
+          <option  value="Ether ">Ether</option>
+          <option  value="Stellar">Stellar</option>
+         
+        </select>     
+
+         </td>
+     
+      <td> <input type="text"  placeholder="Label"  name="to" class="form-control" id="to">
+ 
+    </tr>
+    </tbody>
+  </table>
+
+      </div>
+       
+    </div>
+
+      <div class="form-group">
+      <label for="address">Address</label>
+      <textarea rows="2" cols="10"   name="address" class="form-control" id="address"  >
+
+</textarea> 
+     
+ 
+    </div>
+    <button  class="btn btn-success btn-sm" >Submit</button>
+  </form>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Date and Time">
+    <ng-template ngbPanelContent>
+       <form [formGroup]="addForm"  (ngSubmit)="onSubmit()">
+     <div class="form-group">
+         <label for="currency">Time Zone</label>
+  
+<select name="currency"  class="form-control" >
+          <option  value="USD PAX">USD PAX</option>
+          <option  value="Bitcoin ">Bitcoin</option>
+          <option  value="Bitcoin cash">Bitcoin cash</option>
+          <option  value="Ether ">Ether</option>
+          <option  value="Stellar">Stellar</option>
+         
+        </select> 
+</div>
+     <div class="form-group">
+
+            <label for="currency">Date Format</label>
+  
+<select name="currency"  class="form-control" >
+          <option  value="USD PAX">USD PAX</option>
+          <option  value="Bitcoin ">Bitcoin</option>
+          <option  value="Bitcoin cash">Bitcoin cash</option>
+          <option  value="Ether ">Ether</option>
+          <option  value="Stellar">Stellar</option>
+         
+        </select> 
+      </div>
+     </form>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Fees">
+    <ng-template ngbPanelContent>
+     <h6>Default currency for fees</h6>
+
+<p>Your default currency to deduct fees from (for margin trading, and exchange depending on Exchange fee setting)</p>
+<select name="currency"  class="form-control" >
+          <option  value="USD PAX">USD </option>
+          <option  value="Bitcoin ">BTC</option>
+         
+         
+        </select> 
+        <br>
+        <h6>Fee type for Exchange orders</h6>
+
+<p>This setting concerns Exchange orders. However, please note that if your account does not hold sufficient balance in the fee currency the platform will automatically apply the fee to the first available balance.</p>
+
+<input type=radio value=1>  Currency Exchange Fee         &nbsp;        &nbsp; Fees will be taken in the currency you receive (BTC if you buy BTC/USD or USD if you sell BTC/USD for example). <br>
+<input type=radio value=1>  Asset Trading Fee           &nbsp;       &nbsp;   Fees will be taken in the default currency set above. 
+
+
+
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Funding">
+    <ng-template ngbPanelContent>
+      <h6>Funding Options</h6>
+      <input type="checkbox"> 
+        <input type="checkbox"> 
+          <input type="checkbox"> 
+            <input type="checkbox"> 
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Account Info">
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+      labore sustainable VHS.
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<div class="row">
+
+
+  <div class="col-md-4"></div>  <div class="col-md-4">
+    <div class="card" >
+      <div class="card-body">    
+
+<h5 class="card-title">Send Payment
+
+</h5>
+
+
+
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+
+      <label for="amount">Amount</label>
+      <input type="text" formControlName="amount" placeholder="Amount" name="amount" class="form-control" id="amount">
+    </div>
+
+
+
+    
+    <div class="form-group">
+      <label for="address">Address</label>
+      <textarea rows="3" cols="4" formControlName="address" placeholder="Address" name="address" class="form-control" id="address" ></textarea>
+    </div>
+
+  
+
+
+ 
+
+
+
+    <button class="btn btn-primary float-right" >Submit</button>
+  </form>
+</div>
+</div></div></div>-->

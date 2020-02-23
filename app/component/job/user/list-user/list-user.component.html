@@ -1,0 +1,160 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+ 
+<h5 class="card-title">System User
+  
+
+ </h5>
+
+<div  class="table-responsive">
+
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+     
+     <th scope="col">Status</th>
+    
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of userslist index as i ">
+    <td  scope="col"> {{i+1}}</td>
+    <td>
+     
+     
+      <td>{{user.status}}</td>
+
+        <td *ngIf="user.status==0">
+       <i class="fas fa-times fa-1x " style="  color:green" (click)="sendtostatus(user)" >
+         
+       </i>   
+       &nbsp;
+       <i class="fas fa-edit fa-1x" style="  color:red" (click)="editUser(user)" >    
+        </i> 
+&nbsp;
+       <i class="fas fa-money fa-1x" style="  color:blue" (click)="sendtostatus(user)">
+            
+       </i>
+       &nbsp;
+          </td>
+           
+            
+ <td *ngIf="user.status==1">
+      <i class="fas fa-check fa-1x" style="  color:green" (click)="sendtostatus(user)" ></i>&nbsp;
+         <i class="fas fa-edit fa-1x" style="  color:red" (click)="editUser(user)" ></i>  &nbsp;
+          <i class="fas fa-times fa-1x" style="  color:blue" (click)="sendtostatus(user)" ></i>&nbsp;</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+  </ngb-pagination>
+
+  <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
+    <option [ngValue]="2">2 items per page</option>
+    <option [ngValue]="4">4 items per page</option>
+    <option [ngValue]="6">6 items per page</option>
+  </select>
+</div>
+
+ <div  *ngIf="loading">
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+
+  </div>
+</div>  
+<div class="text-center" *ngIf="testCount==0">
+
+ 
+ 
+<h2>No User found</h2>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+<!--
+
+
+
+<div class="container ">
+ 
+
+ <div class="row">
+
+<div class="col">
+  <h2 style="  float:left;"> Active Students</h2>
+</div>
+
+  
+    <table> <tr><td><button class="btn btn-info" (click)="addUser()"> Add Student</button></td></tr></table>
+  
+    </div>  
+  <table class="table table-striped">
+    <thead>
+    <tr>
+ 
+
+      <th class="hidden">ID</th>
+      <th>Name</th>
+      <th>Mobile No</th>
+      <th>Father name</th>
+          <th>Father Mobile No</th>
+         
+           <th > &nbsp; Options &nbsp;</th>
+     
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      
+
+      <td class="hidden">{{user.id}}</td>
+      <td>{{user.name}}</td>
+       <td>{{user.mobile_no}}</td>
+       <td>{{user.father_name}}</td>
+             <td>{{user.father_mobile_no}}</td>
+             
+
+              
+        <td *ngIf="user.status==0">
+       <i class="fas fa-times fa-1x " style="  color:green" (click)="sendtostatus(user)" >
+         
+       </i>   
+       &nbsp;
+       <i class="fas fa-edit fa-1x" style="  color:red" (click)="editUser(user)" >    
+        </i> 
+&nbsp;
+       <i class="fas fa-money fa-1x" style="  color:blue" (click)="sendtostatus(user)">
+            
+       </i>
+       &nbsp;
+          </td>
+           
+            
+ <td *ngIf="user.status==1">
+      <i class="fas fa-check fa-1x" style="  color:green" (click)="sendtostatus(user)" ></i>&nbsp;
+         <i class="fas fa-edit fa-1x" style="  color:red" (click)="editUser(user)" ></i>  &nbsp;
+          <i class="fas fa-times fa-1x" style="  color:blue" (click)="sendtostatus(user)" ></i>&nbsp;</td>
+ 
+
+    </tr>
+    </tbody>
+  </table>
+</div>-->
+ <!--<td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>-->

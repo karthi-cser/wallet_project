@@ -1,0 +1,97 @@
+
+
+<div class="container">
+  <div class="row"><div class="col-md-4  "> </div>
+    <div class="col-md-4  ">
+      <div class="login-box">
+        <h3 class="box-title">Login ...</h3>
+        <hr>
+        <form #loginForm="ngForm" (ngSubmit)="signIn()">
+          
+
+
+         
+
+
+          <div class="form-group">
+            <label>Email Address<sup class="text-danger">*</sup></label>
+            <input type="email"  class="form-control" id="email" name="email" required email ngModel #email="ngModel"   placeholder="Enter your registered email address">
+            <div *ngIf="email.invalid && email.touched" class="alert alert-danger">
+          Please provide a correct email address!
+        </div>
+          </div>
+          <div class="form-group">
+            <label>Password<sup class="text-danger">*</sup></label>
+            <input type="password" class="form-control" id="password" name="password" required minlength="4" ngModel #password="ngModel"  placeholder="Enter your password">
+            <div *ngIf="password.invalid && password.touched" class="alert alert-danger">
+          Password must have at least 4 characters
+        </div>
+          </div>
+          <div class="form-group">
+           
+            <button type="submit" class="btn btn-success login-btn pull-right"  [disabled]="loginForm.invalid">SUBMIT</button>
+               <a routerLink="/register">Register Here</a>
+           
+          </div>
+           <a routerLink="/">Forget Password</a>
+        </form>
+        
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<div class="container">
+    <h1>Sign In</h1>
+    <form #loginForm="ngForm" (ngSubmit)="signIn()">
+
+      <div class="form-group">
+        <label for="id">Center Code</label>
+        <input type="text" class="form-control" id="id" name="id"required id ngModel #id="ngModel">
+        <div *ngIf="id.invalid && id.touched" class="alert alert-danger">
+          Please provide a correct center code!
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" name="email"required email ngModel #email="ngModel">
+        <div *ngIf="email.invalid && email.touched" class="alert alert-danger">
+          Please provide a correct email address!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required minlength="4" ngModel #password="ngModel">
+        <div *ngIf="password.invalid && password.touched" class="alert alert-danger">
+          Password must have at least 4 characters
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Sign In</button>
+    </form>
+  </div>
+-->
+  

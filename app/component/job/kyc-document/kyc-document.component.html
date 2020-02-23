@@ -1,0 +1,414 @@
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Verification > Address</h4>
+    <hr class="solid">
+    <br>
+    
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  
+  <div class="modal-body">
+    <h6>Address PO Box not accepted</h6>
+  <br>
+  <h5>Residential Address</h5>
+     <form [formGroup]="editForm"  (ngSubmit)="onSubmit()">
+  
+<div class="form-group">
+
+
+   <label for="country">Country</label>
+    <div  class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    
+
+    </thead>
+    <tbody>
+    <tr>
+      <td>  
+        
+       <select name="country" formControlName="country" class="form-control" placeholder="Select Your Country" >
+          <option  value="India">India</option>
+          <option  value="United Kingdom">United Kingdom</option>
+          <option  value="Canada">Canada </option>
+          <option  value="Indonasia">Indonasia</option>
+          <option  value="Nigeria">Nigeria</option>
+         
+        </select>   
+     
+
+<td> <input type="text" formControlName="state" placeholder="State/Province " name="state" class="form-control" id="state">
+        </td>
+
+    
+    </tr>
+
+
+    <tr><td><input type="text" formControlName="city" placeholder="City/Town" name="city" class="form-control" id="city">
+        </td>
+<td><input type="text" formControlName="district" placeholder="District" name="district" class="form-control" id="district">
+        </td>
+    </tr>
+
+
+    <tr><td><input type="number" formControlName="house_no" placeholder="Building Name/House Number" name="house_no" class="form-control" id="house_no">
+        </td>
+<td><input type="text" formControlName="street" placeholder="Street Name " name="street" class="form-control" id="street">
+        </td>
+    </tr>
+
+
+     <tr><td><input type="number" formControlName="apartment_number" placeholder="Apartment Number" name="apartment_number" class="form-control" id="apartment_number">
+        </td>
+<td><input type="number" formControlName="zip_code" placeholder="Postal/Zip Code " name="zip_code" class="form-control" id="zip_code">
+        </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+      </div>
+     
+    </div>
+
+
+
+  <div class="modal-footer">
+    <button  class="btn btn-outline-primary" >Submit</button>
+
+  </div>
+  </form>
+  </div>
+</ng-template>
+
+
+
+
+<ng-template #content1 let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Verification > Name & Contact</h4>
+    <hr class="solid">
+    <br>
+    
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  
+  <div class="modal-body">
+
+    <h5>  Contact Person & Information</h5>
+  <br>
+  <h6>  Use Roman letters</h6>
+     <form [formGroup]="editForm"  (ngSubmit)="onSubmit()">
+  
+<div class="form-group">
+
+
+   <label for="country">Country</label>
+    <div  class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    
+
+    </thead>
+    <tbody>
+
+
+    <tr><td><input type="text" formControlName="last_name" placeholder="Last Name" name="last_name" class="form-control" id="last_name">
+        </td>
+        <td>                  </td>
+
+        <td><input type="text" formControlName="first_name" placeholder="First Name" name="first_name" class="form-control" id="first_name">
+        </td>
+    </tr>
+
+
+    <tr>
+      <td>  
+        <label for="country">Birth Day</label>
+       <select name="country" formControlName="country" class="form-control" placeholder="Select Your Country" >
+          <option  value="India">1</option>
+          <option  value="United Kingdom">2</option>
+          <option  value="Canada">3 </option>
+          <option  value="Indonasia">4</option>
+          <option  value="Nigeria">5</option>
+         
+        </select>   </td>
+     
+
+<td>  <label for="country">Birth Month</label>
+       <select name="country" formControlName="country" class="form-control" placeholder="Select Your Country" >
+          <option  value="India">January</option>
+          <option  value="United Kingdom">Feburary</option>
+          <option  value="Canada">March</option>
+          <option  value="Indonasia">April</option>
+          <option  value="Nigeria">May</option>
+         
+        </select> 
+        </td>
+<td>  <label for="country">Birth Year</label>
+       <select name="country" formControlName="country" class="form-control" placeholder="Select Your Country" >
+          <option  value="India">1990</option>
+          <option  value="United Kingdom">1995</option>
+          <option  value="Canada">1998</option>
+          <option  value="Indonasia">2000</option>
+          <option  value="Nigeria">2005</option>
+         
+        </select> 
+        </td>
+    
+    </tr>
+
+
+    <tr><td><label for="country">Nationality</label>
+       <select name="country" formControlName="country" class="form-control" placeholder="Select Your Country" >
+          <option  value="India">India</option>
+          <option  value="United Kingdom">United Kingdom</option>
+          <option  value="Canada">Canada </option>
+          <option  value="Indonasia">Indonasia</option>
+          <option  value="Nigeria">Nigeria</option>
+         
+        </select> 
+        </td>
+<td><label for="country">Gender</label>
+       <select name="country" formControlName="country" class="form-control" placeholder="Select Your Country" >
+          <option  value="India">Male</option>
+          <option  value="United Kingdom">Female</option>
+         
+         
+        </select> 
+        </td>
+    </tr>
+
+
+
+    </tbody>
+  </table>
+    <hr class="solid">
+
+<h5>Contact Information</h5>
+  <br>
+  <h6>Telephone Number</h6>
+
+<div class="form-group">
+
+
+   <label for="country">Country Code</label>
+    <div  class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    </thead>
+    <tbody>
+  <tr><td><input type="number" formControlName="apartment_number" placeholder="+91" name="apartment_number" class="form-control" id="apartment_number">
+        </td>
+<td><input type="number" formControlName="zip_code" placeholder="Area Code " name="zip_code" class="form-control" id="zip_code">
+        </td>
+    </tr>
+
+
+     <tr><td><input type="number" formControlName="mobile" placeholder="Phone Number" name="mobile" class="form-control" id="mobile">
+        </td>
+<td><input type="text" formControlName="email" placeholder="Email " name="email" class="form-control" id="email">
+        </td>
+    </tr>
+</tbody></table></div>
+
+      </div>
+     
+    </div>
+</div>
+
+
+  <div class="modal-footer">
+    <button  class="btn btn-outline-primary" >Submit</button>
+
+  </div>
+  </form>
+  </div>
+</ng-template>
+
+
+
+
+<ng-template #content3 let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Verification > Identity</h4>
+    <hr class="solid">
+    <br>
+    
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  
+  <div class="modal-body">
+<b>Two forms of identification with photo are required (passport preferred).</b>
+  <br>
+  <p>Identity Cards must have photo with both sides copied. Please provide official English translation for Non-Roman Letters.</p>
+
+  <p>If you do not have two forms of photo ID, please upload a single valid form of photo ID in two sections to complete the form; a Skype video or Hangout call could be arranged with the Compliance Team once all sections of the form have been populated.</p>
+  
+<div ><div class="notice-title">required</div><div class="notice-item"><i class="notice-item-icon fa fa-check"></i><span>The document must be <u>valid</u>: please double check expiration date</span></div><div class="notice-item"><i class="notice-item-icon fa fa-check"></i><span>The document must be <u>issued from a government</u></span></div><div class="notice-item"><i class="notice-item-icon fa fa-check"></i><span>The document must show a <u>photo of your face</u></span></div><div class="notice-item"><i class="notice-item-icon fa fa-check"></i><span>The document must have a <u>high resolution</u></span></div><div class="notice-item"><i class="notice-item-icon fa fa-check"></i><span>The document must be fully visible and <u>not cropped or obscured</u></span></div><div class="notice-item"><i class="notice-item-icon fa fa-check"></i><span><u>You need to upload both sides (front and back) for ID cards</u></span></div></div>
+     
+
+<br><br>
+
+     <div class="sections-to-complete"><div class="custom-checkbox"><label class="bp3-control bp3-checkbox"><input name="passport_check" id="passport_check" type="checkbox" value="false"><span class="bp3-control-indicator"></span><span class="label">  Passport</span></label></div><div class="custom-checkbox"><label class="bp3-control bp3-checkbox"><input name="national_id_check" id="national_id_check" type="checkbox" value="false"><span class="bp3-control-indicator"></span><span class="label"> National ID Card</span></label></div><div class="custom-checkbox"><label class="bp3-control bp3-checkbox"><input name="driver_check" id="driver_check" type="checkbox" value="false"><span class="bp3-control-indicator"></span><span class="label">  Drivers License</span></label></div><div class="custom-checkbox"><label class="bp3-control bp3-checkbox"><input name="other_id_check" id="other_id_check" type="checkbox" value="false"><span class="bp3-control-indicator"></span><span class="label">  Other Photo ID</span></label></div></div>
+    </div>
+
+
+
+  <div class="modal-footer">
+    <button  class="btn btn-outline-primary" >Submit</button>
+
+  </div>
+  
+
+</ng-template>
+
+
+
+
+<ng-template #content4 let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Verification> KYC Declaration Form</h4>
+    <hr class="solid">
+    <br>
+    
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+ 
+
+  <div class="modal-body">
+     <form [formGroup]="editForm"  (ngSubmit)="onSubmit4()">
+     <h6>Please download, complete all fields, sign and upload a copy of the "Know Your Customer Declaration Form" as required by AML/KYC regulations.</h6>
+  <br>
+     <p>   
+      <i class="fa fa-file-pdf"></i>  Download Declaration Form</p>
+     
+<div class="file-input"><div class="file-input-wrapper">
+  <div class="file-input-loader bp3-button">
+    <i class="fa fa-paperclip"></i>
+    <span class="file-input-loader-title">Choose file</span>
+    <input class="file-input-loader-input" name="images" formControlName="images" type="file" accept=".png,.pdf,.zip,.jpg,.jpeg,.jpe,.mp4,.m3u8,.ts,.3gp,.mov,.avi,.wmv" title="No file chosen">
+    
+ 
+       <br><br>
+        
+          <span class="">Upload completed form</span>
+        </div></div>
+
+</div>
+    
+
+
+
+  <div class="modal-footer">
+    <button  class="btn btn-outline-primary" >Submit</button>
+
+  </div>
+</form>
+  </div>
+</ng-template>
+
+
+
+
+
+
+<div class="row">
+
+<div  class="col-md-4"></div>  <div class="col-md-4">
+<h4>Verification</h4>
+<h6>Account Type: Individual (Reset)</h6>
+
+
+
+
+<span  style="border: 1px ">Due to high verification demand, please expect a processing time between 1-2 
+weeks after all forms are submitted. Monitor your email for status updates and progress reports from the compliance team.</span>
+<br><br>
+<ngb-accordion>
+	 <ngb-panel title="Name & Contact">
+  <ng-template ngbPanelContent>
+  	<table class="compact highlight">
+  <tbody>
+    <tr>
+   
+      <td >
+      	<h5>Name &amp; Contact</h5>
+    <p>Information for securely identifying the account holder.</p>
+
+     <button  class="btn btn-primary btn-sm" (click)="open2(content1)">Begin</button>
+      </td>
+   
+    </tr>
+  	</tbody></table>
+    </ng-template>
+  </ngb-panel>
+
+
+
+  <ngb-panel title="Address">
+  <ng-template ngbPanelContent>
+  	<table class="compact highlight">
+  <tbody>
+    <tr>
+     
+      <td >
+      	<h5>Address</h5>
+    <p>Location information for secure record keeping.</p>
+
+     <button  class="btn btn-primary btn-sm"  (click)="open(content)">Begin</button>
+      </td>
+   
+    </tr>
+  	</tbody></table>
+    </ng-template>
+  </ngb-panel>
+
+
+    <ngb-panel title="Identity">
+  <ng-template ngbPanelContent>
+  	<table class="compact highlight">
+  <tbody>
+    <tr>
+      
+      <td >
+      	<h5>Identity</h5>
+    <p>Information for ensuring only you are capable of transacting on your account.</p>
+
+     <button  class="btn btn-primary btn-sm" (click)="open3(content3)">Begin</button>
+      </td>
+   
+    </tr>
+  	</tbody></table>
+    </ng-template>
+  </ngb-panel>
+
+     <ngb-panel title="KYC Declaration Form ">
+  <ng-template ngbPanelContent>
+  	<table class="compact highlight">
+  <tbody>
+    <tr>
+      
+      <td >
+      	<h5>KYC Declaration</h5>
+    <p>Please download, complete all fields, sign and upload a copy of the "Know Your Customer Declaration Form" as required by AML/KYC regulations.
+<br>
+     <button  class="btn btn-primary btn-sm" (click)="open4(content4)">Begin</button>
+      </td>
+   
+    </tr>
+  	</tbody></table>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+</div>
+</div>

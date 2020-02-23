@@ -1,0 +1,456 @@
+
+
+
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Send Payment</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+     <form [formGroup]="addForm"  (ngSubmit)="onSubmit()">
+  
+
+     
+<div class="form-group">
+  <label for="currency">Coin</label>
+    
+        
+       <select name="coin" formControlName="coin" class="form-control" >
+          <option  value="USD PAX">USD PAX</option>
+          <option  value="Bitcoin ">Bitcoin</option>
+          <option  value="Bitcoin cash">Bitcoin cash</option>
+          <option  value="Ether ">Ether</option>
+          <option  value="Stellar">Stellar</option>
+         
+        </select>     
+
+    </div>
+
+
+
+<div class="form-group">
+      <label for="to">To</label>
+     
+       <input type="text" formControlName="to" placeholder="To"  name="to" class="form-control" id="to">
+ 
+    </div>
+ 
+<div class="form-group">
+
+
+   <label for="amount">Amount</label>
+    <div  class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    
+
+    </thead>
+    <tbody>
+    <tr>
+      <td>  
+        
+       <input type="number" formControlName="amount" placeholder="USD" name="amount" class="form-control" id="amount">
+         </td>
+     
+
+<td> <input type="number" formControlName="amount_coin" placeholder="BTC" name="amount1" class="form-control" id="amount1">
+        </td>
+
+    
+    </tr>
+    </tbody>
+  </table>
+
+      </div>
+     
+    </div>
+       
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea rows="3" cols="4"  formControlName="description" placeholder="What's this transaction for? (optional)" name="description" class="form-control" id="description" ></textarea>
+    </div>
+<div class="form-group">
+  <label for="network_fee">Network Fee</label>
+       <select formControlName="network_fee" name="network_fee"  class="form-control" >
+          <option  value="Regular ">Regular</option>
+          <option  value="Priority ">Priority</option>         
+         
+        </select>
+      </div>
+
+
+  <label>Estimated confirmation time 1+ hour</label>
+  <div class="modal-footer">
+    <button  class="btn btn-outline-primary" >Continue</button>
+
+  </div>
+  </form>
+  </div>
+</ng-template>
+
+
+
+<ng-template #content1 let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Request Payment</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+     <form  [formGroup]="addForm" (ngSubmit)="onSubmit1()">
+
+
+      <div class="form-group">
+ 
+ <label for="currency">Currency</label>
+        
+       <select name="coin" formControlName="coin" class="form-control" >
+          <option  value="USDPAX">USD PAX</option>
+          <option  value="BTC">Bitcoin</option>
+          <option  value="BCH">Bitcoin cash</option>
+          <option  value="ETH">Ether</option>
+          <option  value="STL">Stellar</option>
+         
+        </select>
+    </div>
+ 
+ 
+ 
+      <label for="address">Your receiving Address</label>
+       
+
+<ng-template [ngIf]="receive_address" > 
+<p>
+   You selected coin {{receive_coin}}
+</p>
+<p>
+
+      <B>{{receive_address}} </B>
+
+    </p>
+
+  </ng-template>
+    
+ 
+
+ <ng-template [ngIf]="receive_coin =='Bitcoin'" > 
+      
+
+<p>
+      <img src="https://blockchain.info/qr?data={{receive_address}}&size=200" />
+    </p>
+  </ng-template>
+
+
+    
+   <div class="modal-footer">
+    <button  class="btn btn-outline-primary" >Generate a new address</button>
+
+  </div>
+   </form>
+  </div>
+
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-3">
+
+<div class="flex flex-column items-center justify-center br2 ba bw3 b--white shadow-2 pa4 bg-gray2">
+    
+
+</div>
+
+
+
+
+
+
+<mat-card class="example-card">
+ <mat-card-title>Send Payment</mat-card-title>
+   
+ 
+   <mat-card-actions>
+    <button class="btn btn-primary btn-sm" (click)="open(content)"> Send Payment</button>
+  </mat-card-actions>
+
+</mat-card>
+
+
+
+</div><div class="col-md-3">
+
+
+
+<mat-card class="example-card">
+ <mat-card-title>Deposit</mat-card-title>
+   
+
+ 
+   <mat-card-actions>
+    <button routerLink="/job/user/list-user" class="btn btn-primary btn-sm">Deposit</button>
+  </mat-card-actions>
+
+</mat-card>
+
+ 
+
+</div><div class="col-md-3">
+
+
+
+
+<mat-card class="example-card">
+ <mat-card-title>Deposit</mat-card-title>
+   
+ 
+   <mat-card-actions>
+  
+    <button routerLink="/job/testdraft" class="btn btn-primary btn-sm">Transactions</button>
+  </mat-card-actions>
+
+</mat-card>
+
+
+
+</div>
+<div class="col-md-3">
+<mat-card class="example-card">
+ <mat-card-title>Receive Payment</mat-card-title>
+   
+
+ 
+   <mat-card-actions>
+   <button   class="btn btn-primary btn-sm " (click)="open2(content1)">Receive Payment </button>
+  </mat-card-actions>
+
+</mat-card>
+
+ 
+
+</div>
+
+
+</div> 
+</div> 
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+   
+  <div class="row" >
+
+   
+<div class="col-md-3">
+
+
+
+<div class="flex flex-column items-center justify-center br2 ba bw3 b--white shadow-2 pa4 bg-gray2">
+    
+
+</div>
+
+
+
+<div class="card">
+  <div class="card-header">
+  Transactions
+  </div>
+  <div class="card-body">
+ <div class="card-title float-right"></div>
+    <p class="card-text">Total {{testCount}} Balance</p>
+    
+  </div>
+</div>
+
+</div><div class="col-md-3">
+
+
+<div class="card">
+  <div class="card-header">
+    Deposit
+  </div>
+  <div class="card-body">
+ <div class="card-title float-right"></div>
+    <p class="card-text">Total 0  BTC</p>
+   
+  </div>
+</div>
+
+</div><div class="col-md-3">
+
+
+<div class="card">
+  <div class="card-header">
+    Payment
+  </div>
+  <div class="card-body">
+ <div class="card-title float-right"></div>
+    <p class="card-text">Total {{testCount1}}  registered</p>
+   
+  </div>
+</div>
+
+</div>
+<div class="col-md-3">
+
+
+<div class="card">
+  <div class="card-header">
+    New Request
+  </div>
+  <div class="card-body">
+ <div class="card-title float-right"></div>
+    <p class="card-text">Total 0  New Request  </p>
+    
+  </div>
+</div>
+
+</div>
+</div> 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <br><br>
+
+<div class="row">
+  <div class="col-md-12">
+    
+      <div class="card">
+
+  
+  <div class="card-body">
+
+<h5 class="card-title">Transaction
+
+
+  
+      
+   
+   
+ </h5>
+
+ 
+  <div  class="table-responsive">
+  
+
+  <table class="table table-striped">
+    <thead >
+    <tr>
+      <th>Id</th>  
+      <th>Description</th>  
+       <th>Coin</th>  
+       <th>Cr</th>  
+       <th>Dr</th>  
+       
+           <th>Created At</th>
+            <th>Updated At</th>
+           <th>Status</th>
+           
+          </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let q of test " (click)="sendto(q)">
+       <td   >{{q.user_id}}</td>
+      <td   >{{q.description}}</td>
+ <td   >{{q.coin}}</td>
+ <td   >{{q.cr}}</td>
+ <td   >{{q.dr}}</td>
+ <td  >{{q.created_at| date:"MM/dd/yy" }}</td>
+ <td  >{{q.updated_at| date:"MM/dd/yy" }}</td>
+  <td  >{{q.status }}</td>
+      
+
+
+        
+
+    
+
+        
+          
+    
+         
+
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+    <div  *ngIf="loading">
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+
+  </div>
+</div>  
+<div class="text-center" *ngIf="testCount==0">
+
+ 
+ 
+<p>No Test found</p>
+</div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
