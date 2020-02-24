@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     this.authService
       .login(this.loginForm.value)
       .subscribe((data) => {
-//console.log("token",data.token);
+console.log("token",data);
 
         localStorage.setItem('token', data['access_token']);
 
@@ -32,7 +32,27 @@ export class LoginComponent implements OnInit {
         //localStorage.setItem('name', data['email']['name'])
       window.localStorage.removeItem("c_name");
     //window.localStorage.setItem("c_name", data.user.name);
-        this.router.navigate([ '/job/test-list' ])
+
+
+
+     window.localStorage.removeItem("roll");
+    
+
+    window.localStorage.setItem("roll",data['user']['roll']    );
+
+   alert(data['user']['roll']);
+
+
+if(data['user']['roll']==10){
+        this.router.navigate(['/job/user/list-user' ])
+}if(data['user']['roll']==0)
+{
+  this.router.navigate([ '/job/test-list' ])
+}
+
+
+
+        
       });
   }
 

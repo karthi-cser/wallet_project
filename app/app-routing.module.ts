@@ -20,7 +20,8 @@ import { KycDocumentComponent } from './component/job/kyc-document/kyc-document.
 import { TransactionComponent } from './component/job/transaction/transaction.component' ;
 import { WithdrawComponent } from './component/job/withdraw/withdraw.component' ;
 import { DepositComponent } from './component/job/deposit/deposit.component' ;
-
+import { UserProfileComponent } from './component/job/user-profile/user-profile.component';
+import { ChangePasswordComponent } from './component/job/change-password/change-password.component';
 
 
 const routes: Routes = [
@@ -57,6 +58,8 @@ const routes: Routes = [
 
 { path: 'job/deposit', component: DepositComponent , canActivate: [AuthGuard]},
 { path: 'job/withdraw', component: WithdrawComponent , canActivate: [AuthGuard]},
+{ path: 'job/user-profile', component: UserProfileComponent , canActivate: [AuthGuard]},
+{ path: 'job/change-password', component: ChangePasswordComponent , canActivate: [AuthGuard]},
 
 
 

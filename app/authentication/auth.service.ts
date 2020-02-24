@@ -32,6 +32,14 @@ private readonly registerUrl1 = 'https://auth.globo4x.com/laravel/public/api/aut
     
   }
 
+  isAdmin() {
+  let roll = window.localStorage.getItem("roll");
+  
+    return parseInt(roll)!== 10;
+    
+  }
+
+
   getToken() {
     let token = localStorage.getItem('token');
 

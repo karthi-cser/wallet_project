@@ -89,6 +89,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
+import { UserProfileComponent } from './component/job/user-profile/user-profile.component';
+import { ChangePasswordComponent } from './component/job/change-password/change-password.component';
 
 
 @NgModule({
@@ -115,6 +117,8 @@ import {MatTreeModule} from '@angular/material/tree';
     TransactionComponent,
     WithdrawComponent,
     DepositComponent,
+    UserProfileComponent,
+    ChangePasswordComponent,
    
 
    

@@ -36,6 +36,7 @@ export class JobService {
 baseUrl1 = 'https://auth.globo4x.com/laravel/public/api/auth/system/transactions';
 baseUrl2 = 'https://auth.globo4x.com/laravel/public/api/auth/system/';
 baseUrl3 = 'https://auth.globo4x.com/laravel/public/api/auth/';
+baseUrl4 = 'https://auth.globo4x.com/laravel/public/api/';
 
   createJob(data) {
       return this.http.post(createJob, data);
@@ -165,7 +166,7 @@ createCenter(center: Center): Observable<ApiResponse> {
   }
 
  updatedocument(center: Center): Observable<ApiResponse> {
-    return this.http.post<ApiResponse>(this.baseUrl3 +'postkycnew', center);
+    return this.http.post<ApiResponse>('https://roomlight.saksh.website/uploader.php', center);
   }
 
    
@@ -203,7 +204,7 @@ TestById(id: number): Observable<ApiResponse> {
   }
 
   getUsers1() : Observable<Array<User>>{
-    return this.http.get<Array<User>>(this.baseUrl2+'deposits');
+    return this.http.get<Array<User>>(this.baseUrl2+'users');
   }
 
 getactiveUsers1() : Observable<ApiResponse> {
@@ -224,6 +225,11 @@ gettopUsers1() : Observable<ApiResponse> {
 
    studentStatus(id:number): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(this.baseUrl +'studentStatus.php?id='+ id);
+    
+  }
+
+   changeStatus(id:number): Observable<ApiResponse> {
+    return this.http.get<ApiResponse>(this.baseUrl3 +'changeStatus?id='+ id);
     
   }
 newstudentStatus(id:number): Observable<ApiResponse> {

@@ -1,0 +1,96 @@
+
+
+<div class="row">
+
+
+  <div class="col-md-4"></div> 
+   <div class="col-md-4">
+    <div class="card" >
+     
+      <div class="card-body">  
+
+ <h5 class="card-title">User Profile</h5>
+  <p class="card-text">Please Contact Account manager to update your profile</p>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    
+
+	
+	<div class="hidden" >
+      <input type="hidden" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+   
+              
+    </div>
+	
+    <div class="form-group">
+      <label for="first_name">First Name:</label>
+     
+	     <input type="text" formControlName="first_name" placeholder="Center Name"  name="first_name" class="form-control" id="first_name"  >
+ 
+    </div>
+
+    <div class="form-group">
+      <label for="last_name">Last Name</label>
+      <input formControlName="last_name" placeholder="Username" name="last_name" class="form-control" id="last_name" >
+    </div>
+   
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input formControlName="email" placeholder="email" name="email" class="form-control" id="email" >
+    </div>
+
+
+ <div class="form-group">
+      <label for="mobile">Mobile No</label>
+      <input formControlName="mobile" placeholder="Mobile No" name="mobile" class="form-control" id="mobile" >
+    </div>
+
+<div class="form-group">
+      <label for="country">Country</label>
+      <input formControlName="country" placeholder="Country" name="country" class="form-control" id="country" >
+    </div>
+
+   <div class="form-group">
+      <label for="state">State</label>
+      <input formControlName="state" placeholder="State" name="state" class="form-control" id="state" >
+    </div>
+
+
+
+ 
+   <div class="form-group">
+      <label for="address1">Address1:</label>
+      <textarea rows="4" cols="50" formControlName="address1" placeholder="Address1" name="address1" class="form-control" id="address1" >
+
+</textarea> 
+      
+  
+ 
+ 
+    </div>
+ 
+   <div class="form-group">
+      <label for="address2">Address2:</label>
+      <textarea rows="4" cols="50" formControlName="address2" placeholder="Address2" name="address2" class="form-control" id="address2" >
+
+</textarea> 
+      
+  
+ 
+ 
+    </div>
+
+
+	
+ 
+ 
+
+    <button class="btn btn-primary float-right" >Update</button>
+    
+  </form>
+</div>
+
+
+
+</div></div></div>
+
