@@ -91,6 +91,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import { UserProfileComponent } from './component/job/user-profile/user-profile.component';
 import { ChangePasswordComponent } from './component/job/change-password/change-password.component';
+import { MylibrarylistComponent } from './mylibrarylist/mylibrarylist.component';
+import { GloballibrarylistComponent } from './globallibrarylist/globallibrarylist.component';
 
 
 @NgModule({
@@ -119,6 +121,8 @@ import { ChangePasswordComponent } from './component/job/change-password/change-
     DepositComponent,
     UserProfileComponent,
     ChangePasswordComponent,
+    MylibrarylistComponent,
+    GloballibrarylistComponent,
    
 
    

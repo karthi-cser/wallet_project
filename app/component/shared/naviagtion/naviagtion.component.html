@@ -21,7 +21,7 @@
   <mat-sidenav  [(opened)]="opened"   mode="side"  #sidenav>
     <mat-nav-list>
 
-           <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/test-list"> Home </a>
+           <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/test-list"> Home </a>
 <mat-accordion>
   <mat-expansion-panel>
     <mat-expansion-panel-header>
@@ -34,9 +34,9 @@
     </mat-expansion-panel-header>
 
    
- <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/transaction"> Transactions </a>
- <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/deposit"> Deposit </a>
- <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/withdraw"> Withdraw </a>
+ <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/transaction"> Transactions </a>
+ <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/deposit"> Deposit </a>
+ <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/withdraw"> Withdraw </a>
 
 
   </mat-expansion-panel>
@@ -50,9 +50,9 @@
        
       </mat-panel-description>
     </mat-expansion-panel-header>
-      <a  *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/kyc-document"> Verification </a>
-      <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/user-profile">Profile </a>
-      <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="job/change-password">  Change Password </a>
+      <a  *ngIf="authService.isAuthenticated()" mat-list-item routerLink="kyc-document"> Verification </a>
+      <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="user-profile">Profile </a>
+      <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="change-password">  Change Password </a>
   </mat-expansion-panel>
 </mat-accordion>
 
@@ -98,8 +98,8 @@
   <mat-sidenav  [(opened)]="opened"   mode="side"  #sidenav>
     <mat-nav-list>
 
-           <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/test-list"> Home </a>
-           <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/user/list-user"> Users </a>
+           <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="test-list"> Home </a>
+           <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="user/list-user"> Users </a>
 <mat-accordion>
   <mat-expansion-panel>
     <mat-expansion-panel-header>
@@ -112,10 +112,10 @@
     </mat-expansion-panel-header>
 
    
- <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/transaction"> All Transactions </a>
+ <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="transaction"> All Transactions </a>
  
- <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/deposit"> All Deposit </a>
- <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/withdraw"> All Withdraw </a>
+ <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="deposit"> All Deposit </a>
+ <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="withdraw"> All Withdraw </a>
 
 
   </mat-expansion-panel>
@@ -129,9 +129,9 @@
        
       </mat-panel-description>
     </mat-expansion-panel-header>
-      <a  *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/kyc-document"> Verification </a>
-      <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="/job/user-profile">Profile </a>
-      <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="job/change-password">  Change Password </a>
+      <a  *ngIf="authService.isAuthenticated()" mat-list-item routerLink="kyc-document"> Verification </a>
+      <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="user-profile">Profile </a>
+      <a *ngIf="authService.isAuthenticated()" mat-list-item routerLink="change-password">  Change Password </a>
   </mat-expansion-panel>
 </mat-accordion>
 

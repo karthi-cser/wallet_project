@@ -36,30 +36,30 @@ const routes: Routes = [
 
   
 
-  { path: 'job/test-list', component: TestListComponent, canActivate: [AuthGuard]},
-  { path: 'job/center', component: CenterComponent, canActivate: [AuthGuard]},
+  { path: 'test-list', component: TestListComponent, canActivate: [AuthGuard]},
+  { path: 'center', component: CenterComponent, canActivate: [AuthGuard]},
 
 
-    { path: 'job/center-update', component: CenterUpdateComponent, canActivate: [AuthGuard]},
+    { path: 'center-update', component: CenterUpdateComponent, canActivate: [AuthGuard]},
 
-     { path: 'job/test', component: TestComponent, canActivate: [AuthGuard]},
+     { path: 'test', component: TestComponent, canActivate: [AuthGuard]},
   
 
-   { path: 'job/testdraft', component: TestdraftComponent , canActivate: [AuthGuard]},
+   { path: 'testdraft', component: TestdraftComponent , canActivate: [AuthGuard]},
 
 
-{ path: 'job/user/list-user', component: ListUserComponent , canActivate: [AuthGuard]},
-{ path: 'job/kyc-document', component: KycDocumentComponent , canActivate: [AuthGuard]},
+{ path: 'user/list-user', component: ListUserComponent , canActivate: [AuthGuard]},
+{ path: 'kyc-document', component: KycDocumentComponent , canActivate: [AuthGuard]},
 
 
 
-   { path: 'job/transaction', component: TransactionComponent , canActivate: [AuthGuard]},
+   { path: 'transaction', component: TransactionComponent , canActivate: [AuthGuard]},
 
 
-{ path: 'job/deposit', component: DepositComponent , canActivate: [AuthGuard]},
-{ path: 'job/withdraw', component: WithdrawComponent , canActivate: [AuthGuard]},
-{ path: 'job/user-profile', component: UserProfileComponent , canActivate: [AuthGuard]},
-{ path: 'job/change-password', component: ChangePasswordComponent , canActivate: [AuthGuard]},
+{ path: 'deposit', component: DepositComponent , canActivate: [AuthGuard]},
+{ path: 'withdraw', component: WithdrawComponent , canActivate: [AuthGuard]},
+{ path: 'user-profile', component: UserProfileComponent , canActivate: [AuthGuard]},
+{ path: 'change-password', component: ChangePasswordComponent , canActivate: [AuthGuard]},
 
 
 
