@@ -129,13 +129,18 @@
 
     <tr>
       <td>  
-        <label for="country">Birth Day</label>
-       <select name="country" formControlName="country" class="form-control" placeholder="Select Your Country" >
-          <option  value="India">1</option>
-          <option  value="United Kingdom">2</option>
-          <option  value="Canada">3 </option>
-          <option  value="Indonasia">4</option>
-          <option  value="Nigeria">5</option>
+        <label for="day">Birth Day</label>
+       <select name="day" formControlName="day" class="form-control" placeholder="Select Your Country" >
+          <option  value="1">1</option>
+          <option  value="2">2</option>
+          <option  value="3">3 </option>
+          <option  value="4">4</option>
+          <option  value="5">5</option>
+           <option  value="6">6</option>
+          <option  value="7">7</option>
+          <option  value="8">8 </option>
+          <option  value="9">9</option>
+          <option  value="10">10</option>
          
         </select>   </td>
      
@@ -147,7 +152,13 @@
           <option  value="Canada">March</option>
           <option  value="Indonasia">April</option>
           <option  value="Nigeria">May</option>
-         
+          <option  value="India">June</option>
+          <option  value="United Kingdom">July</option>
+          <option  value="Canada">August</option>
+          <option  value="Indonasia">September</option>
+          <option  value="Nigeria">October</option>
+          <option  value="Indonasia">November</option>
+          <option  value="Nigeria">December</option>
         </select> 
         </td>
 <td>  <label for="country">Birth Year</label>
@@ -306,9 +317,16 @@
 
 </div>
     
+<ngx-dropzone (change)="onSelect($event)">
+    <ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
+    <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+        <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+    </ngx-dropzone-preview>
+</ngx-dropzone>
 
-
-
+<ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f">
+  <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+</ngx-dropzone-image-preview>
   <div class="modal-footer">
     <button  class="btn btn-outline-primary" >Submit</button>
 

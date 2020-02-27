@@ -1,4 +1,95 @@
 
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Send Payment</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+     <form [formGroup]="addForm"  (ngSubmit)="modal.dismiss('Cross click')">
+  
+
+     
+<div class="form-group">
+  <label for="currency">Coin</label>
+    
+        
+       <select name="coin" formControlName="coin" class="form-control" >
+          <option  value="USD PAX">USD PAX</option>
+          <option  value="Bitcoin ">Bitcoin</option>
+          <option  value="Bitcoin cash">Bitcoin cash</option>
+          <option  value="Ether ">Ether</option>
+          <option  value="Stellar">Stellar</option>
+         
+        </select>     
+
+    </div>
+
+
+
+<div class="form-group">
+      <label for="to">To</label>
+     
+       <input type="text" formControlName="to" placeholder="To"  name="to" class="form-control" id="to">
+ 
+    </div>
+ 
+<div class="form-group">
+
+
+   <label for="amount">Amount</label>
+    <div  class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    
+
+    </thead>
+    <tbody>
+    <tr>
+      <td>  
+        
+       <input type="number" formControlName="amount" placeholder="USD" name="amount" class="form-control" id="amount">
+         </td>
+     
+
+<td> <input type="number" formControlName="amount_coin" placeholder="BTC" name="amount1" class="form-control" id="amount1">
+        </td>
+
+    
+    </tr>
+    </tbody>
+  </table>
+
+      </div>
+     
+    </div>
+       
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea rows="3" cols="4"  formControlName="description" placeholder="What's this transaction for? (optional)" name="description" class="form-control" id="description" ></textarea>
+    </div>
+<div class="form-group">
+  <label for="network_fee">Network Fee</label>
+       <select formControlName="network_fee" name="network_fee"  class="form-control" >
+          <option  value="Regular ">Regular</option>
+          <option  value="Priority ">Priority</option>         
+         
+        </select>
+      </div>
+
+
+  <label>Estimated confirmation time 1+ hour</label>
+  <div class="modal-footer">
+    <button  class="btn btn-outline-primary" >Continue</button>
+
+  </div>
+  </form>
+  </div>
+</ng-template>
+
+
+
 
 <div class="container">
  
@@ -11,16 +102,15 @@
   
   <div class="card-body">
 
-<h5 class="card-title">Withdraw
+    <h5 >Withdraw
 
-
+<button class="btn btn-primary  float-right  btn-sm"    (click)="open(content)"><i class="fas fa-plus fa-1x"></i> Withdraw Money  </button>
   
-      
-
+     
    
  </h5>
 
- 
+
   <div  class="table-responsive">
 
 

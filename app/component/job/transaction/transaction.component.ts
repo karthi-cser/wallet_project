@@ -50,7 +50,7 @@ this.testCount=1;
     console.log( this.test);
     this.dataSource = data;
 
-this.columnsToDisplay = ['id', 'coin',  'created_at','updated_at','status'];
+this.columnsToDisplay = ['id', 'coin',  'updated_at','sent_from','received_by','dr'];
 expandedElement: TestList;  
  
 

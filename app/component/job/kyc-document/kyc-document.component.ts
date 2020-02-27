@@ -19,7 +19,7 @@ export class KycDocumentComponent implements OnInit {
  users: User[];
    editForm: FormGroup;
    closeResult;
-
+files: File[] = [];
 
   constructor(private formBuilder: FormBuilder,private router: Router, private jobService: JobService,private modalService: NgbModal) { }
 
@@ -33,7 +33,7 @@ open(content) {
     this.editForm = this.formBuilder.group({
       id: [''],                             
       first_name: [''],email: [''],mobile: [''],country: [''],address1: [''],address2: [''],state: [''],
-       last_name: [''] ,email_verified_at:[''],created_at:[''],updated_at:[''],city:[''],district:[''],house_no:[''],street:[''],apartment_number:[''],zip_code:[''],images:[''],roll:['']
+       last_name: [''] ,email_verified_at:[''],created_at:[''],updated_at:[''],city:[''],district:[''],house_no:[''],street:[''],apartment_number:[''],zip_code:[''],images:[''],roll:[''],status:[''],dob:['']
     
     });
     this.jobService.getCenterById()
@@ -58,7 +58,7 @@ open(content) {
     this.editForm = this.formBuilder.group({
       id: [''],                             
       first_name: [''],email: [''],mobile: [''],country: [''],address1: [''],address2: [''],state: [''],
-       last_name: [''] ,email_verified_at:[''],created_at:[''],updated_at:[''],city:[''],district:[''],house_no:[''],street:[''],apartment_number:[''],zip_code:[''],images:[''],roll:['']
+       last_name: [''] ,email_verified_at:[''],created_at:[''],updated_at:[''],city:[''],district:[''],house_no:[''],street:[''],apartment_number:[''],zip_code:[''],images:[''],roll:[''],status:[''],dob:['']
     
     });
     this.jobService.getCenterById()
@@ -82,7 +82,7 @@ open3(content3) {
     this.editForm = this.formBuilder.group({
       id: [''],                             
       first_name: [''],email: [''],mobile: [''],country: [''],address1: [''],address2: [''],state: [''],
-       last_name: [''] ,email_verified_at:[''],created_at:[''],updated_at:[''],city:[''],district:[''],house_no:[''],street:[''],apartment_number:[''],zip_code:[''],images:[''],roll:['']
+       last_name: [''] ,email_verified_at:[''],created_at:[''],updated_at:[''],city:[''],district:[''],house_no:[''],street:[''],apartment_number:[''],zip_code:[''],images:[''],roll:[''],status:[''],dob:['']
     
     });
     this.jobService.getCenterById()
@@ -107,7 +107,7 @@ open4(content4) {
     this.editForm = this.formBuilder.group({
       id: [''],                             
       first_name: [''],email: [''],mobile: [''],country: [''],address1: [''],address2: [''],state: [''],
-       last_name: [''] ,email_verified_at:[''],created_at:[''],updated_at:[''],city:[''],district:[''],house_no:[''],street:[''],apartment_number:[''],zip_code:[''],images:[''],roll:['']
+       last_name: [''] ,email_verified_at:[''],created_at:[''],updated_at:[''],city:[''],district:[''],house_no:[''],street:[''],apartment_number:[''],zip_code:[''],images:[''],roll:[''],status:[''],dob:['']
     
     });
     this.jobService.getCenterById()
@@ -172,5 +172,13 @@ onSubmit4() {
           alert(error);
         });
   }
-
+onSelect(event) {
+  console.log(event);
+  this.files.push(...event.addedFiles);
+}
+ 
+onRemove(event) {
+  console.log(event);
+  this.files.splice(this.files.indexOf(event), 1);
+}
 }

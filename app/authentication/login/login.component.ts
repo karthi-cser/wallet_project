@@ -46,12 +46,12 @@ console.log("token",data);
 if(data['user']['roll']==10){
 
 
-        this.router.navigate(['/job/user/list-user' ])
+        this.router.navigate(['user/list-user' ])
 
 
 }if(data['user']['roll']==0)
 {
-  this.router.navigate([ '/job/test-list' ])
+  this.router.navigate([ 'test-list' ])
 }
 
 

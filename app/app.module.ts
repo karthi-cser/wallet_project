@@ -51,7 +51,7 @@ import { WithdrawComponent } from './component/job/withdraw/withdraw.component';
 import { DepositComponent } from './component/job/deposit/deposit.component'; 
 
 
-
+import { NgxDropzoneModule } from 'ngx-dropzone';
 
 
 
@@ -93,6 +93,7 @@ import { UserProfileComponent } from './component/job/user-profile/user-profile.
 import { ChangePasswordComponent } from './component/job/change-password/change-password.component';
 import { MylibrarylistComponent } from './mylibrarylist/mylibrarylist.component';
 import { GloballibrarylistComponent } from './globallibrarylist/globallibrarylist.component';
+import { ApiDocumentComponent } from './component/job/api-document/api-document.component';
 
 
 @NgModule({
@@ -123,6 +124,7 @@ import { GloballibrarylistComponent } from './globallibrarylist/globallibrarylis
     ChangePasswordComponent,
     MylibrarylistComponent,
     GloballibrarylistComponent,
+    ApiDocumentComponent,
    
 
    
@@ -140,7 +142,7 @@ import { GloballibrarylistComponent } from './globallibrarylist/globallibrarylis
     HttpClientModule,
     ToastrModule,
     CKEditorModule,NgbModule,
-    NgxSpinnerModule,MatSliderModule,MatTableModule,
+    NgxSpinnerModule,MatSliderModule,MatTableModule,NgxDropzoneModule,
     
 
 

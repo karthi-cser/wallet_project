@@ -57,16 +57,17 @@ onSubmit() {
       .subscribe(
         data => {
           if(data.status === 200) {
-          this._snackBar.open("Added Successfully", "Close", {
+          
+           // alert(' Center updated successfully.');
+            this.router.navigate(['job/center-list']);
+          }else {
+           // alert(data.message);
+            this._snackBar.open(data.message, "Close", {
       duration: 2000,
 
       verticalPosition: 'top',
       horizontalPosition: 'center'
     });
-           // alert(' Center updated successfully.');
-            this.router.navigate(['job/center-list']);
-          }else {
-            alert(data.message);
           }
         },
         error => {
